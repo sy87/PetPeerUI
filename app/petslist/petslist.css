@@ -1,0 +1,21 @@
+.grid-heading {
+    text-align: center;
+    border: 1px solid #f3eeee;
+    font-size: 14px;
+    border-radius: 3px;
+    background-color: #cbcbf7;
+    padding: 10px;
+}
+
+.grid-data {
+    text-align: center;
+    border: 1px solid #f3eeee;
+    font-size: 14px;
+    border-radius: 3px;
+    color: #99999a;
+    padding: 10px;
+}
+
+.btn-container {
+    padding: 3px 10px;
+}

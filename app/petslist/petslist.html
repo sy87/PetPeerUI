@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row"> 
+        <p class="title">Pet List</p> 
+        <div class="col-sm-1 grid-heading">#</div>
+        <div class="col-sm-2 grid-heading">Pet Name</div>
+        <div class="col-sm-3 grid-heading">Place</div>
+        <div class="col-sm-3 grid-heading">Age</div>
+        <div class="col-sm-3 grid-heading">Action</div>
+
+        <div ng-controller="PetsListCtrl">
+            <!-- <ul>
+                <li ng-repeat="pl in petsList">{{pl.name}} | {{pl.place}} | {{pl.age}} | {{pl.action}}</li>
+            </ul> -->
+            <div ng-repeat="pl in petsList">
+                <div class="col-sm-1 grid-data">{{$index + 1}}</div>
+                <div class="col-sm-2 grid-data">{{pl.name}}</div>
+                <div class="col-sm-3 grid-data">{{pl.place}}</div>
+                <div class="col-sm-3 grid-data">{{pl.age}}</div>
+                <!-- <div class="col-sm-3 grid-data btn-container">
+                    <button class="btn btn-primary" ng-disabled="pl.action!='Buy'" ng-click="buyClicked()">{{pl.action}}</a>
+                </div> -->
+                <div class="col-sm-3 grid-data btn-container">
+                    <button ng-show="{{pl.user}}" class="btn btn-primary" ng-disabled="true">Sold</a>
+                    <button ng-hide="{{pl.user}}" class="btn btn-primary" ng-disabled="false" ng-click="buyClicked()">Buy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
